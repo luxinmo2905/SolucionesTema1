@@ -92,7 +92,30 @@ b.  Usa las funciones **dim, head, tail, str** para una primera visión de los c
 c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 
 ```{r}
+#Cargamos la información
+mammals_data <- data(package = "MASS", topic= mammals)
+Animals2_data <- data(package = "robustbase", topic= Animals2)
 
+help(mammals) #En la parte inferior izquierda nos explican qué información contiene cada variable, como por ejempo que el peso del cuerpo está en kg y el peso del cerebro en g
+help(Animals2)
+
+#Primero haremos de los mamíferos
+str(mammals)
+dim(mammals) #filas x columnas(observacionesx variables)
+head(mammals) #6 primeras observaciones
+tail(mammals) #6 últimas observaciones
+
+#Ahora del segundo conjunto de datos
+str(Animals2)
+dim(Animals2)
+head(Animals2)
+tail(Animals2)
+
+rownames(mammals) #son nombres de los animales
+colnames(mammals) #nombres de las variables
+
+rownames(Animals2)
+colnames(Animals2)
 
 
 
