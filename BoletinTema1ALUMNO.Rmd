@@ -210,7 +210,25 @@ dim(libReturn$results) #Como ya sabemos que es una lista de 3, 214 son las libre
 
 ```{r}
 
+#Primero el número de registros
+#Segundo, número de variables
+#Y tercero, tipos de vaiables
 
+dim(cabbages) #60 registros y 4 variables
+cabbages_data <- cabbages #Al guardarlo como variable, observamos en el desplegable que cult y date son factores, HeadWt es un número y VitC son enteros
+
+sum(is.na(cabbages)) #No hay valores NA
+
+#Ahora con el paquete Chile
+dim(Chile) #2700 registros y 8 variables
+Chile_data <- Chile #Al guardarlo como variable, observamos en el desplegable que region,sex,education y vote son factores; population,age e income son enteros y; statusquo , es un número
+
+sum(is.na(Chile)) #Hay 295 valores perdidos
+
+
+#Hacemos summary
+summary(cabbages)
+summary(Chile) #Por ejemplo en education hay 11 valores perdidos
 
 
 
