@@ -228,8 +228,8 @@ qqPlot(cabbages$VitC, ylab="Cantidad Vitamina C", xlab= "Lechugas")
 6.  Una representación habitual, para determinar la distribución de los datos de una variable cuantitativa es el histograma (**hist**). Determina, de forma aproximada, utilizando el histograma, si hay diferencias entre los contenidos de vitamina C (**VitC**), para las diferentes variedades de calabaza (variable **Cult**), en el conjunto de datos **cabbages**.
 
 ```{r}
-hist(cabbages$VitC[cabbages$Cult == "c39"])
-hist(cabbages$VitC[cabbages$Cult == "c52"])
+hist(cabbages$VitC[cabbages$Cult == "c39"],xlab="Lechugas c39",main = "Vitamina C en lechugas c39", col= "green")
+hist(cabbages$VitC[cabbages$Cult == "c52"],xlab="lechugas c52",main = "Vitamina C en lechugas c52", col= "darkgreen")
 
 
 ```
@@ -264,7 +264,7 @@ b.  Repite el apartado anterior, pero obteniendo un modelo para cada una de las 
 #Diagrama de dispersión global.
 plot(cabbages$HeadWt, cabbages$VitC)
 #Diagrama de dispersión etiquetando según un factor.
-plot(cabbages$HeadWt, cabbages$VitC, pch=c(6,16)[cabbages$Cult])
+plot(cabbages$HeadWt, cabbages$VitC, pch=c(6,16)[cabbages$Cult],xlab= "Anchura", ylab= "Vitamina C")
 legend(x="topright",legend=c("Cult = c39","Cult = c52"), pch=c(6,16))
 # Planteamos 2 modelos lineales, uno para los datos de cada factor
 Model1 <- lm(VitC ~ HeadWt, data = cabbages, subset = which(Cult == "c39"))
