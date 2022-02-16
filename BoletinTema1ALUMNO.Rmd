@@ -120,18 +120,6 @@ colnames(Animals2)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
@@ -140,8 +128,6 @@ d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los 
 
 commonAnimals <- intersect(mammals,Animals2)
 commonAnimals #Observando el resultado, casi todos los animales están en ambos conjuntos
-
-
 
 
 ```
@@ -153,9 +139,6 @@ setdiff(Animals2, mammals) #hay 3 animales que están en Animals2 que no están 
 
 
 
-
-
-
 ```
 
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
@@ -163,7 +146,6 @@ e.  Determina las diferencia entre los animales que no aparecen en ambos conjunt
 
 
 En Animals2 no hay una característica específica común entre ellos; sin embargo en mammals sí. Los 3 animales que no están en mammals son dinosaurios, por lo que es correcto que no se encuentren en los mamíferos ya que eran reptiles.
-
 
 
 
@@ -190,11 +172,6 @@ qqPlot(log(Animals2$brain), ylab="Peso del cerebro", xlab= "Animales")
 libReturn <- library() #es una lista de 3
 head(libReturn$results)
 dim(libReturn$results) #Como ya sabemos que es una lista de 3, 214 son las librerías que yo tengo instaladas
-
-
-
-
-
 
 
 
@@ -232,33 +209,15 @@ summary(Chile) #Por ejemplo en education hay 11 valores perdidos
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
 
 ```{r}
+
+qqPlot(cabbages$HeadWt, ylab="Anchura", xlab= "Lechugas")
+qqPlot(cabbages$VitC, ylab="Cantidad Vitamina C", xlab= "Lechugas")
+#Con ambas podríamos afirmar con un 95% que sigue la distribución Gaussiana
 
 
 
