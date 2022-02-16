@@ -187,7 +187,9 @@ qqPlot(log(Animals2$brain), ylab="Peso del cerebro", xlab= "Animales")
     c.  Determina el número de librerías que tienes instaladas.
 
     ```{r}
-
+libReturn <- library() #es una lista de 3
+head(libReturn$results)
+dim(libReturn$results) #Como ya sabemos que es una lista de 3, 214 son las librerías que yo tengo instaladas
 
 
 
