@@ -138,7 +138,8 @@ d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los 
 
 ```{r}
 
-
+commonAnimals <- intersect(mammals,Animals2)
+commonAnimals #Observando el resultado, casi todos los animales están en ambos conjuntos
 
 
 
@@ -148,6 +149,7 @@ d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los 
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
 
 ```{r}
+setdiff(Animals2, mammals) #hay 3 animales que están en Animals2 que no están en mammals
 
 
 
@@ -158,20 +160,14 @@ e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. �
 
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 
-```{r}
+
+
+En Animals2 no hay una característica específica común entre ellos; sin embargo en mammals sí. Los 3 animales que no están en mammals son dinosaurios, por lo que es correcto que no se encuentren en los mamíferos ya que eran reptiles.
 
 
 
 
 
-
-
-
-
-
-
-
-```
 
 2.  La funcion **qqPlot** del paquete **car** puede ser utilizada para determinar gráficamente si una serie de puntos siguen una distribución de datos Gaussiana. Si las muestras están dentro de las líneas discontinuas podemos indicar que siguen una distribución Gaussiana con un 95 % de confianza. Utilizando esta función representa el logaritmo neperiano (**log**) del peso del cerebro (**brain weigths**) del registro de datos **mammals** del paquete **MASS** y conjunto de datos **Animals2** de la librería **robustbase**. ¿Presentan el mismo comportamiento ?.¿Podríamos decir que siguen una distribución Gaussiana ?
 
